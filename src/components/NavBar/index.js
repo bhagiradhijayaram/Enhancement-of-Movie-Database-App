@@ -25,24 +25,24 @@ const NavBar = props => {
   }
 
   return (
-    <nav className="nav_container">
-      <h1 className="logo_name">MovieDB</h1>
+    <nav className='nav_container'>
+      <h1 className='logo_name'>MovieDB</h1>
 
       {/* Desktop Menu */}
-      <div className="nav_menu_container_desktop">
-        <ul className="nav_menu_container">
-          <li className="nav_menu_item">
-            <Link to="/" className="nav_link">
+      <div className='nav_menu_container_desktop'>
+        <ul className='nav_menu_container'>
+          <li className='nav_menu_item'>
+            <Link to='/' className='nav_link'>
               Popular
             </Link>
           </li>
-          <li className="nav_menu_item">
-            <Link to="/top-rated" className="nav_link">
+          <li className='nav_menu_item'>
+            <Link to='/top-rated' className='nav_link'>
               Top Rated
             </Link>
           </li>
-          <li className="nav_menu_item">
-            <Link to="/upcoming" className="nav_link">
+          <li className='nav_menu_item'>
+            <Link to='/upcoming' className='nav_link'>
               Upcoming
             </Link>
           </li>
@@ -50,56 +50,57 @@ const NavBar = props => {
       </div>
 
       {/* Search Bar */}
-      <form className="search_container">
+      <form className='search_container'>
         <input
-          type="search"
-          className="search-field"
-          placeholder="Search.."
+          type='search'
+          className='search-field'
+          placeholder='Search..'
+          role='textbox'
           onChange={onChangeSearchInput}
         />
-        <button type="submit" className="search_button" onClick={onSearchClick}>
+        <button type='submit' className='search_button' onClick={onSearchClick}>
           Search
         </button>
       </form>
 
       {/* Mobile Menu Button */}
-      <div className="nav_menu_container_mobile">
-        <button className="menu_button" type="button" onClick={toggleMenu}>
-          <i className="fa-solid fa-bars"></i>
+      <div className='nav_menu_container_mobile'>
+        <button className='menu_button' type='button' onClick={toggleMenu}>
+          <i className='fa-solid fa-bars'></i>
         </button>
       </div>
 
       {/* Mobile Menu (Conditional Rendering) */}
       {isMenuOpen && (
-        <div className="mobile_menu">
-          <ul className="mobile_menu_list">
-            <li className="mobile_menu_item">
-              <Link to="/" className="nav_link" onClick={toggleMenu}>
+        <div className='mobile_menu'>
+          <ul className='mobile_menu_list'>
+            <li className='mobile_menu_item'>
+              <Link to='/' className='nav_link' onClick={toggleMenu}>
                 Popular
               </Link>
             </li>
-            <li className="mobile_menu_item">
-              <Link to="/top-rated" className="nav_link" onClick={toggleMenu}>
+            <li className='mobile_menu_item'>
+              <Link to='/top-rated' className='nav_link' onClick={toggleMenu}>
                 Top Rated
               </Link>
             </li>
-            <li className="mobile_menu_item">
-              <Link to="/upcoming" className="nav_link" onClick={toggleMenu}>
+            <li className='mobile_menu_item'>
+              <Link to='/upcoming' className='nav_link' onClick={toggleMenu}>
                 Upcoming
               </Link>
             </li>
-            <li className="mobile_menu_item">
+            <li className='mobile_menu_item'>
               {/* Search Bar */}
-              <form className="search_container_mobile">
+              <form className='search_container_mobile'>
                 <input
-                  type="search"
-                  className="search-field"
-                  placeholder="Search Movies..."
+                  type='search'
+                  className='search-field'
+                  placeholder='Search Movies...'
                   onChange={onChangeSearchInput}
                 />
                 <button
-                  type="submit"
-                  className="search_button"
+                  type='submit'
+                  className='search_button'
                   onClick={onSearchClick}
                 >
                   Search
